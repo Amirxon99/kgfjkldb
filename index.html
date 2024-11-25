@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-element-bundle.min.css" />
+</head>
+<body>
+    <header class="container">
+    <img src="./img/Logo.png" alt="sd">
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Home</a></li>
+        <button class="btn">Sign Up</button>
+      </ul>
+    </nav>
+    </header>
+    <main>
+        <section class="hero container">
+               <div class="hero-text">
+                 <h1>Exquisite Watches</h1>
+                 <h2>Choose Luxury, Choose Us</h2>
+                 <p>Discover the Perfect Watch for Every Occasion and Elevate Your Style with Timeless Elegance and Precision Craftsmanship - watch</p>
+                 <h1>$430.00</h1>
+               </div>
+               <div class="hero-carusel">
+                <swiper-container
+                id="swiper"
+                class="mySwiper"
+                navigation="true"
+                pagination="true"
+                keyboard="true"
+                mousewheel="true"
+                css-mode="true"
+              >
+                <swiper-slide data-color="yellow"><img src="./img/sariqsoat.png" alt="Yellow"></swiper-slide>
+                <swiper-slide data-color="red"><img src="./img/qizilsoat.png" alt="Red"></swiper-slide>
+                <swiper-slide data-color="green"><img src="./img/yashilsoat.png" alt="Green"></swiper-slide>
+                <swiper-slide data-color="black"><img src="./img/qorasoat.png" alt="Black"></swiper-slide>
+              </swiper-container>
+               </div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/swiper/swiper-element-bundle.min.js"></script>
+    <script>
+      // Swiper-ni boshlash
+      const swiperContainer = document.querySelector('swiper-container');
+      document.body.style.backgroundColor = "yellow";
+      // Swiperning hodisalarini ishlatish
+      swiperContainer.swiper.on('slideChange', () => {
+     
+        
+        const activeSlide = swiperContainer.querySelector('.swiper-slide-active');
+        
+        const color = activeSlide.getAttribute('data-color');
+      
+        document.body.style.backgroundColor = color;
+   
+        
+       
+      });
+    </script>
+</body>
+</html>
